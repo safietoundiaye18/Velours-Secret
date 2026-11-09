@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Velours Secret</title>
+  <meta name="description" content="Contactez Velours Secret sur WhatsApp, par e-mail, Instagram ou TikTok. Du lundi au samedi, de 9h à 20h. Livraison à Dakar et environs.">
+  <meta name="theme-color" content="#722F43">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="contact">
+
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-head">
+      <div class="hero__pattern" aria-hidden="true"></div>
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane"><a href="index.html">Accueil</a><span>/</span><span aria-current="page">Contact</span></nav>
+        <h1>Nous contacter</h1>
+        <p>Une question, un conseil de taille ? Nous répondons avec plaisir.</p>
+      </div>
+    </section>
+    <div class="wax-band" aria-hidden="true"></div>
+
+    <!-- Moyens de contact -->
+    <section class="section">
+      <div class="container">
+        <ul class="contact-grid">
+          <li class="contact-card reveal">
+            <span class="trust__icon" data-icon="whatsapp"></span>
+            <h3>WhatsApp</h3>
+            <p><a href="#" id="ctWa" target="_blank" rel="noopener"></a></p>
+            <p>Notre canal le plus rapide.</p>
+          </li>
+          <li class="contact-card reveal">
+            <span class="trust__icon" data-icon="mail"></span>
+            <h3>E-mail</h3>
+            <p><a href="#" id="ctMail"></a></p>
+          </li>
+          <li class="contact-card reveal">
+            <span class="trust__icon" data-icon="clock"></span>
+            <h3>Horaires</h3>
+            <p id="ctHours"></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Formulaire + infos pratiques -->
+    <section class="section section--cream">
+      <div class="container contact-split">
+        <div class="contact-form reveal">
+          <p class="eyebrow">Écrivez-nous</p>
+          <h2>Un message sur WhatsApp</h2>
+          <form id="contactForm" novalidate>
+            <fieldset class="orderform">
+              <label for="cName">Votre prénom</label>
+              <input type="text" id="cName" autocomplete="given-name" maxlength="60" placeholder="Ex : Awa">
+              <label for="cMsg">Votre message</label>
+              <textarea id="cMsg" rows="4" maxlength="500" placeholder="Ex : Je souhaite un conseil de taille pour l’Ensemble Teranga…" required></textarea>
+            </fieldset>
+            <button type="submit" class="btn btn--whatsapp btn--block"><span data-icon="whatsapp"></span> Envoyer sur WhatsApp</button>
+            <p class="form-msg" id="cMsgStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="contact-info reveal">
+          <p class="eyebrow">Bon à savoir</p>
+          <h2>Livraison et paiement</h2>
+          <ul>
+            <li><strong>Livraison</strong> à Dakar et environs : 1 000 à 2 000 FCFA selon votre zone.</li>
+            <li><strong>Paiement</strong> à la livraison, par Wave ou par Orange Money.</li>
+            <li><strong>Taille :</strong> nous vous la demandons avant chaque commande, afin de vous conseiller la bonne pièce. Pour cette raison, les échanges ne sont pas possibles.</li>
+          </ul>
+          <div class="contact-socials">
+            <a href="#" id="ctIg" class="btn btn--ghost btn--small" target="_blank" rel="noopener"><span data-icon="instagram"></span> Instagram</a>
+            <a href="#" id="ctTt" class="btn btn--ghost btn--small" target="_blank" rel="noopener"><span data-icon="tiktok"></span> TikTok</a>
+          </div>
+          <p class="demo-note">Ces conditions seront détaillées dans les pages Livraison &amp; échanges et Conditions générales.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <div id="site-drawers"></div>
+
+  <script src="common.js"></script>
+  <script src="contact.js"></script>
+</body>
+</html>

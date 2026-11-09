@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mon panier — Velours Secret</title>
+  <meta name="description" content="Retrouvez les pièces de votre panier Velours Secret et envoyez votre commande sur WhatsApp.">
+  <meta name="theme-color" content="#722F43">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="cart">
+
+  <!-- En-tête + barre d'annonce (injectés par common.js) -->
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-head">
+      <div class="hero__pattern" aria-hidden="true"></div>
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane"><a href="index.html">Accueil</a><span>/</span><span aria-current="page">Mon panier</span></nav>
+        <h1>Mon panier</h1>
+        <p id="cartIntro">Vérifiez vos pièces, puis envoyez votre commande sur WhatsApp.</p>
+      </div>
+    </section>
+    <div class="wax-band" aria-hidden="true"></div>
+
+    <section class="section section--cream cartpage">
+      <div class="container">
+
+        <!-- ===== Panier vide ===== -->
+        <div class="empty-state" id="cartEmpty" hidden>
+          <span data-icon="bag"></span>
+          <h2>Votre panier est vide</h2>
+          <p>Laissez-vous tenter par une pièce qui vous ressemble.</p>
+          <a href="boutique.html" class="btn btn--primary">Découvrir la boutique</a>
+          <nav class="cat-tabs cat-tabs--center" id="emptyTabs" aria-label="Catégories"></nav>
+        </div>
+
+        <!-- ===== Panier rempli ===== -->
+        <div class="cartpage__layout" id="cartLayout" hidden>
+
+          <div class="cartpage__main">
+            <p class="demo-note">Produits et prix fictifs : données de démonstration pour la maquette.</p>
+            <div class="cartpage__alert" id="cartAlert" role="alert" hidden></div>
+            <ul class="cart-lines" id="cartLines"></ul>
+            <div class="cartpage__tools">
+              <a href="boutique.html" class="cartpage__back">← Continuer mes achats</a>
+              <button type="button" class="link-btn" id="clearCart">Vider le panier</button>
+            </div>
+          </div>
+
+          <aside class="summary" aria-labelledby="sumTitle">
+            <h2 id="sumTitle">Récapitulatif</h2>
+            <dl class="totals">
+              <div><dt id="sumCount">Sous-total</dt><dd id="pgSubtotal">0 FCFA</dd></div>
+              <div><dt>Livraison</dt><dd>1 000 à 2 000 FCFA</dd></div>
+              <div class="totals__total"><dt>Total estimé (hors livraison)</dt><dd id="pgTotal">0 FCFA</dd></div>
+            </dl>
+
+            <!-- Informations facultatives : elles s'ajoutent au message WhatsApp (rien n'est enregistré) -->
+            <fieldset class="orderform">
+              <legend>Pour faciliter la livraison <small>(facultatif)</small></legend>
+              <label for="fName">Votre prénom et nom</label>
+              <input type="text" id="fName" autocomplete="name" maxlength="80" placeholder="Ex : Awa Diop">
+              <label for="fPlace">Quartier ou ville</label>
+              <input type="text" id="fPlace" autocomplete="off" maxlength="80" placeholder="Ex : Mermoz, Dakar">
+              <label for="fNote">Un mot pour l’équipe</label>
+              <textarea id="fNote" rows="2" maxlength="200" placeholder="Ex : c’est un cadeau, message à joindre…"></textarea>
+            </fieldset>
+
+            <a href="#" class="btn btn--whatsapp btn--block" id="pgWa" target="_blank" rel="noopener"><span data-icon="whatsapp"></span> Envoyer ma commande sur WhatsApp</a>
+            <p class="summary__note">Aucun paiement en ligne : notre équipe confirme votre commande, la livraison et le règlement avec vous sur WhatsApp. Paiement à la livraison, par Wave ou par Orange Money.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Idées pour compléter la commande -->
+    <section class="section" id="cartSuggest" hidden>
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">Pour compléter</p>
+          <h2>Elles pourraient vous plaire</h2>
+          <p class="demo-note">Produits et prix fictifs : données de démonstration.</p>
+        </header>
+        <div class="product-grid" id="suggestGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pied de page, panier et favoris (injectés par common.js) -->
+  <div id="site-footer"></div>
+  <div id="site-drawers"></div>
+
+  <script src="common.js"></script>
+  <script src="panier.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notre boutique — Velours Secret</title>
+  <meta name="description" content="Découvrez la boutique Velours Secret : lingerie, nuit & détente, coffrets cadeaux et accessoires.">
+  <meta name="theme-color" content="#722F43">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="shop">
+
+  <!-- En-tête + barre d'annonce (injectés par common.js) -->
+  <div id="site-header"></div>
+
+  <main>
+    <!-- Titre de la page -->
+    <section class="page-head">
+      <div class="hero__pattern" aria-hidden="true"></div>
+      <div class="container">
+        <nav class="breadcrumb" id="crumb" aria-label="Fil d'Ariane"></nav>
+        <h1>Notre boutique</h1>
+        <p>Lingerie, pièces de nuit, coffrets et accessoires : des créations choisies avec soin, pensées pour votre confort et votre confiance.</p>
+      </div>
+    </section>
+    <div class="wax-band" aria-hidden="true"></div>
+
+    <section class="section section--cream shop">
+      <div class="container">
+
+        <!-- Recherche -->
+        <div class="shop__search">
+          <label for="shopSearch" class="sr-only">Rechercher un produit</label>
+          <span data-icon="search"></span>
+          <input type="search" id="shopSearch" placeholder="Rechercher une pièce, un coffret…" autocomplete="off">
+          <button type="button" class="icon-btn" id="searchClear" aria-label="Effacer la recherche" hidden><span data-icon="x"></span></button>
+        </div>
+
+        <!-- Barre d'outils : filtres (mobile), compteur, tri -->
+        <div class="toolbar">
+          <button type="button" class="btn btn--ghost btn--small filter-open" id="filterOpen" aria-controls="filters">
+            <span data-icon="filter"></span> Filtres <span class="badge-inline" id="filterBadge" hidden>0</span>
+          </button>
+          <label class="sort">
+            <span class="sr-only">Trier par</span>
+            <select id="sortSelect">
+              <option value="new">Nouveautés</option>
+              <option value="asc">Prix croissant</option>
+              <option value="desc">Prix décroissant</option>
+            </select>
+          </label>
+          <p class="toolbar__count" id="resultCount" aria-live="polite"></p>
+        </div>
+
+        <!-- Filtres actifs -->
+        <div class="chips" id="activeFilters" aria-label="Filtres actifs"></div>
+
+        <div class="shop__layout">
+
+          <!-- Filtres : colonne sur ordinateur, panneau sur mobile -->
+          <aside class="filters" id="filters" aria-label="Filtres">
+            <div class="filters__head">
+              <h2>Filtres</h2>
+              <button type="button" class="icon-btn" id="filterClose" aria-label="Fermer les filtres"><span data-icon="x"></span></button>
+            </div>
+            <div class="filters__body" id="filtersBody"></div>
+            <div class="filters__foot">
+              <button type="button" class="btn btn--ghost" id="filterReset">Réinitialiser</button>
+              <button type="button" class="btn btn--primary filters__apply" id="filterApply">Voir les produits</button>
+            </div>
+          </aside>
+
+          <!-- Résultats -->
+          <div class="shop__results">
+            <p class="demo-note">Produits et prix fictifs : données de démonstration pour la maquette.</p>
+            <div class="product-grid product-grid--shop" id="shopGrid" aria-live="polite"></div>
+
+            <div class="empty-state" id="shopEmpty" hidden>
+              <span data-icon="search"></span>
+              <h3>Aucune pièce ne correspond</h3>
+              <p>Essayez de retirer un filtre ou de modifier votre recherche.</p>
+              <button type="button" class="btn btn--primary" id="emptyReset">Voir toute la boutique</button>
+            </div>
+
+            <div class="load-more" id="loadWrap" hidden>
+              <p id="loadInfo"></p>
+              <button type="button" class="btn btn--ghost" id="loadMore">Voir plus</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pied de page, panier et favoris (injectés par common.js) -->
+  <div id="site-footer"></div>
+  <div id="site-drawers"></div>
+
+  <script src="common.js"></script>
+  <script src="boutique.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Le titre et la description sont mis à jour par categorie.js selon la catégorie -->
+  <title>Catégorie — Velours Secret</title>
+  <meta name="description" content="Découvrez les catégories Velours Secret : lingerie, nuit & détente, coffrets cadeaux et accessoires.">
+  <meta name="theme-color" content="#722F43">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="category">
+
+  <!-- En-tête + barre d'annonce (injectés par common.js) -->
+  <div id="site-header"></div>
+
+  <main>
+    <!-- Titre de la page (rempli par categorie.js) -->
+    <section class="page-head page-head--cat" id="catHead">
+      <div class="hero__pattern" aria-hidden="true"></div>
+      <div class="container">
+        <nav class="breadcrumb" id="crumb" aria-label="Fil d'Ariane"></nav>
+        <h1 id="catTitle">Catégorie</h1>
+        <p id="catIntro"></p>
+      </div>
+    </section>
+    <div class="wax-band" aria-hidden="true"></div>
+
+    <!-- ===== Catégorie introuvable ===== -->
+    <section class="section section--cream" id="catMissing" hidden>
+      <div class="container">
+        <div class="empty-state">
+          <span data-icon="search"></span>
+          <h2>Cet univers est introuvable</h2>
+          <p>Le lien est peut-être incomplet. Choisissez plutôt l’une de nos catégories :</p>
+          <nav class="cat-tabs cat-tabs--center" id="missingTabs" aria-label="Catégories"></nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Produits de la catégorie ===== -->
+    <section class="section section--cream catpage" id="catContent" hidden>
+      <div class="container">
+
+        <!-- Passer d'une catégorie à l'autre -->
+        <nav class="cat-tabs" id="catTabs" aria-label="Catégories"></nav>
+
+        <!-- Barre d'outils : compteur, taille, tri -->
+        <div class="toolbar toolbar--cat">
+          <p class="toolbar__count" id="catCount" aria-live="polite"></p>
+          <label class="sort">
+            <span class="sr-only">Trier par</span>
+            <select id="catSort">
+              <option value="new">Nouveautés</option>
+              <option value="asc">Prix croissant</option>
+              <option value="desc">Prix décroissant</option>
+            </select>
+          </label>
+        </div>
+
+        <!-- Filtre par taille (affiché seulement si la catégorie a des tailles) -->
+        <div class="pill-row" id="sizeFilter" role="group" aria-label="Filtrer par taille" hidden></div>
+
+        <p class="demo-note">Produits et prix fictifs : données de démonstration pour la maquette.</p>
+
+        <div class="product-grid" id="catProducts" aria-live="polite"></div>
+
+        <div class="empty-state" id="catEmpty" hidden>
+          <span data-icon="search"></span>
+          <h3>Aucune pièce dans cette taille</h3>
+          <p>Essayez une autre taille ou revenez à toute la catégorie.</p>
+          <button type="button" class="btn btn--primary" id="catEmptyReset">Voir toute la catégorie</button>
+        </div>
+
+        <p class="catpage__more">Envie d’affiner par prix ou par recherche ? <a href="#" id="shopLink">Utilisez tous les filtres de la boutique</a>.</p>
+
+        <!-- Le conseil de la maison -->
+        <aside class="tipbox" aria-labelledby="tipTitle">
+          <span class="tipbox__icon" data-icon="heart" aria-hidden="true"></span>
+          <div>
+            <h2 id="tipTitle"></h2>
+            <p id="tipText"></p>
+            <a href="#" class="btn btn--whatsapp btn--small" id="tipWa" target="_blank" rel="noopener"><span data-icon="whatsapp"></span> Poser une question sur WhatsApp</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Les autres univers -->
+    <section class="section" id="otherCats" hidden>
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">Continuez la balade</p>
+          <h2>Découvrez nos autres univers</h2>
+        </header>
+        <div class="cat-grid cat-grid--three" id="otherGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pied de page, panier et favoris (injectés par common.js) -->
+  <div id="site-footer"></div>
+  <div id="site-drawers"></div>
+
+  <script src="common.js"></script>
+  <script src="categorie.js"></script>
+</body>
+</html>

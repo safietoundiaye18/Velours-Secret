@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Le titre et la description sont mis à jour par produit.js selon le produit -->
+  <title>Fiche produit — Velours Secret</title>
+  <meta name="description" content="Découvrez cette pièce Velours Secret : lingerie, nuit & détente, coffrets cadeaux et accessoires.">
+  <meta name="theme-color" content="#722F43">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="product">
+
+  <!-- En-tête + barre d'annonce (injectés par common.js) -->
+  <div id="site-header"></div>
+
+  <main>
+    <div class="wax-band" aria-hidden="true"></div>
+
+    <section class="pdp">
+      <div class="container">
+        <nav class="breadcrumb breadcrumb--dark" id="crumb" aria-label="Fil d'Ariane"></nav>
+
+        <!-- ===== Produit introuvable (adresse sans id valide) ===== -->
+        <div class="empty-state" id="pdpMissing" hidden>
+          <span data-icon="search"></span>
+          <h1>Cette pièce est introuvable</h1>
+          <p>Le lien est peut-être incomplet. Retrouvez toutes nos créations dans la boutique.</p>
+          <a href="boutique.html" class="btn btn--primary">Voir la boutique</a>
+        </div>
+
+        <!-- ===== Fiche produit (remplie par produit.js) ===== -->
+        <div class="pdp__layout" id="pdpLayout" hidden>
+
+          <!-- Galerie : image principale + miniatures -->
+          <div class="gallery">
+            <div class="gallery__main" id="galleryMain">
+              <div class="visual" id="gVisual"></div>
+              <img id="gImg" src="" alt="" hidden>
+              <span class="gallery__demo" id="gDemo">Visuel démo</span>
+              <span class="product__tag" id="pTag" hidden></span>
+            </div>
+            <div class="gallery__thumbs" id="gThumbs" role="group" aria-label="Autres vues du produit" hidden></div>
+          </div>
+
+          <!-- Informations -->
+          <div class="pdp__info">
+            <p class="pdp__cat" id="pCat"></p>
+            <h1 class="pdp__name" id="pName"></h1>
+            <p class="pdp__story" id="pStory"></p>
+            <p class="pdp__price" id="pPrice"></p>
+            <p class="pdp__avail" id="pAvail"></p>
+            <p class="demo-note">Produit, prix et disponibilité fictifs : données de démonstration.</p>
+
+            <!-- Taille -->
+            <div class="pdp__block" id="sizeBlock">
+              <div class="pdp__label">
+                <span id="sizeLabel">Taille</span>
+                <button type="button" class="link-btn" id="sizeGuideBtn" aria-haspopup="dialog">Guide des tailles</button>
+              </div>
+              <div class="pdp__sizes" id="pSizes" role="group" aria-label="Choisir la taille"></div>
+              <p class="pdp__error" id="sizeError" role="alert" hidden>Choisissez une taille pour continuer 🌸</p>
+            </div>
+
+            <!-- Quantité -->
+            <div class="pdp__block pdp__qtyrow">
+              <div>
+                <span class="pdp__label" id="qtyLabel">Quantité</span>
+                <div class="qty qty--lg" role="group" aria-labelledby="qtyLabel">
+                  <button type="button" id="qtyMinus" aria-label="Diminuer la quantité">−</button>
+                  <span id="qtyValue" aria-live="polite">1</span>
+                  <button type="button" id="qtyPlus" aria-label="Augmenter la quantité">+</button>
+                </div>
+              </div>
+              <p class="pdp__total">Total <strong id="pTotal"></strong></p>
+            </div>
+
+            <!-- Boutons -->
+            <div class="pdp__buttons">
+              <a href="#" class="btn btn--whatsapp btn--block" id="waBtn" target="_blank" rel="noopener"><span data-icon="whatsapp"></span> Commander sur WhatsApp</a>
+              <button type="button" class="btn btn--primary btn--block" id="addBtn">Ajouter au panier</button>
+              <button type="button" class="btn btn--ghost btn--block" id="pFav" aria-pressed="false"><span data-icon="heart"></span><span id="pFavText">Ajouter aux favoris</span></button>
+            </div>
+            <p class="pdp__note">Aucun paiement en ligne : votre commande est confirmée avec notre équipe sur WhatsApp.</p>
+
+            <!-- Informations détaillées -->
+            <div class="pdp__accordion">
+              <details open>
+                <summary>Description</summary>
+                <div class="acc__body" id="pDesc"></div>
+              </details>
+              <details>
+                <summary>Livraison</summary>
+                <div class="acc__body">
+                  <p>Livraison à Dakar et environs, dans les 24 heures suivant la confirmation de votre commande. Pour les autres régions, écrivez-nous.</p>
+                  <p>Les frais sont de 1 000 à 2 000 FCFA selon votre zone. Paiement à la livraison, par Wave ou par Orange Money.</p>
+                </div>
+              </details>
+              <details>
+                <summary>Échanges</summary>
+                <div class="acc__body">
+                  <p>Nous vous demandons votre taille avant chaque commande pour vous conseiller la bonne pièce. Pour cette raison, les échanges ne sont pas possibles.</p>
+                  <p>Un doute sur votre taille ? Écrivez-nous sur WhatsApp avant de commander. Détails dans <a href="livraison-echanges.html">Livraison &amp; échanges</a>.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Produits similaires -->
+    <section class="section section--cream similar" id="similar" hidden>
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">Pour compléter</p>
+          <h2>Vous aimerez aussi</h2>
+          <p class="demo-note">Produits et prix fictifs : données de démonstration.</p>
+        </header>
+        <div class="product-grid" id="similarGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Guide des tailles : s'ouvre en bas de l'écran sur mobile, au centre sur ordinateur -->
+  <aside class="sheet" id="sizeGuide" role="dialog" aria-modal="true" aria-labelledby="sgTitle">
+    <div class="sheet__head">
+      <h2 id="sgTitle">Guide des tailles</h2>
+      <button type="button" class="icon-btn" data-close aria-label="Fermer le guide des tailles" id="sgClose"><span data-icon="x"></span></button>
+    </div>
+    <div class="sheet__body">
+      <p class="demo-note demo-note--strong">Mesures indicatives à confirmer : elles seront remplacées par les mesures réelles de la marque.</p>
+      <div class="table-wrap">
+        <table class="size-table">
+          <caption class="sr-only">Correspondance entre les tailles et les mesures en centimètres</caption>
+          <thead><tr><th scope="col">Taille</th><th scope="col">Poitrine</th><th scope="col">Ceinture</th><th scope="col">Bassin</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">S</th><td>84–88 cm</td><td>66–70 cm</td><td>92–96 cm</td></tr>
+            <tr><th scope="row">M</th><td>88–92 cm</td><td>70–74 cm</td><td>96–100 cm</td></tr>
+            <tr><th scope="row">L</th><td>92–96 cm</td><td>74–78 cm</td><td>100–104 cm</td></tr>
+            <tr><th scope="row">XL</th><td>96–102 cm</td><td>78–84 cm</td><td>104–110 cm</td></tr>
+            <tr><th scope="row">XXL</th><td>102–108 cm</td><td>84–90 cm</td><td>110–116 cm</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>Comment bien se mesurer ?</h3>
+      <ul class="sheet__tips">
+        <li><strong>Poitrine :</strong> mesurez à l’endroit le plus fort, mètre ruban bien à plat.</li>
+        <li><strong>Ceinture :</strong> au creux de la taille, là où le corps se plie.</li>
+        <li><strong>Bassin :</strong> à l’endroit le plus large des hanches.</li>
+      </ul>
+      <p>Entre deux tailles ? Choisissez la plus grande pour plus de confort, ou demandez conseil à notre équipe.</p>
+      <a href="#" class="btn btn--whatsapp btn--block" id="sgWa" target="_blank" rel="noopener"><span data-icon="whatsapp"></span> Demander conseil sur WhatsApp</a>
+    </div>
+  </aside>
+
+  <!-- Pied de page, panier et favoris (injectés par common.js) -->
+  <div id="site-footer"></div>
+  <div id="site-drawers"></div>
+
+  <script src="common.js"></script>
+  <script src="produit.js"></script>
+</body>
+</html>

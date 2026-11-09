@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Velours Secret — Lingerie & nuit au Sénégal</title>
+  <meta name="description" content="Velours Secret, lingerie féminine, vêtements de nuit et coffrets cadeaux. La douceur d'être femme, le luxe d'être soi.">
+  <meta name="theme-color" content="#722F43">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+
+  <!-- En-tête + barre d'annonce (injectés par common.js) -->
+  <div id="site-header"></div>
+
+
+  <main id="top">
+
+    <!-- C. HÉROS -->
+    <section class="hero">
+      <div class="hero__pattern" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__text reveal">
+          <p class="eyebrow eyebrow--light">Teranga · Élégance · Confiance</p>
+          <h1>Révélez votre élégance, <em>en toute intimité.</em></h1>
+          <p class="hero__lead">Des pièces choisies avec soin pour célébrer votre féminité, votre confort et votre confiance.</p>
+          <div class="hero__buttons">
+            <a href="boutique.html" class="btn btn--gold">Découvrir la collection</a>
+            <a href="#coffrets" class="btn btn--outline-light">Nos coffrets cadeaux</a>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal" aria-hidden="false">
+          <div class="arch">
+            <!-- Photo éditoriale : place ton visuel dans images/hero.jpg -->
+            <img src="images/hero.jpg" alt="Femme portant une nuisette en satin bordeaux avec dentelle et un peignoir assorti" onerror="this.remove()">
+            <div class="arch__fallback">
+              <svg viewBox="0 0 120 120" class="arch__sun" aria-hidden="true"><circle cx="60" cy="60" r="28" fill="none" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M60 14v12M60 94v12M14 60h12M94 60h12M27 27l8 8M85 85l8 8M93 27l-8 8M35 85l-8 8"/></g></svg>
+              <p>Photo éditoriale<br><small>images/hero.jpg</small></p>
+            </div>
+          </div>
+          <span class="hero__tag">Collection <strong>Harmattan</strong><br><small>Visuel de démonstration</small></span>
+        </div>
+      </div>
+    </section>
+
+    <div class="wax-band" aria-hidden="true"></div>
+
+    <!-- D. CATÉGORIES -->
+    <section class="section" id="categories">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Explorer</p>
+          <h2>Nos univers</h2>
+          <p class="section__sub">Quatre façons de prendre soin de vous, inspirées de la grâce des femmes d'ici.</p>
+        </header>
+
+        <div class="cat-grid" id="catGrid"></div>
+      </div>
+    </section>
+
+    <!-- E. PRODUITS -->
+    <section class="section section--cream" id="collection">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">La sélection</p>
+          <h2>Nos pièces coups de cœur</h2>
+          <p class="section__sub">Des noms qui racontent le Sénégal, des matières pensées pour la douceur.</p>
+          <p class="demo-note">Produits et prix fictifs : données de démonstration pour la maquette.</p>
+        </header>
+
+        <div class="product-grid" id="productGrid"></div>
+        <div class="section__cta reveal">
+          <a href="boutique.html" class="btn btn--primary">Voir toute la boutique</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- F. MARQUE -->
+    <section class="section brand" id="marque">
+      <div class="container brand__inner">
+        <div class="brand__visual reveal">
+          <div class="brand__frame">
+            <img src="images/marque.jpg" alt="Atelier et univers Velours Secret" onerror="this.remove()">
+            <div class="brand__fallback" aria-hidden="true"><span>Photo de la marque<br><small>images/marque.jpg</small></span></div>
+          </div>
+          <div class="brand__cowries" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="brand__text reveal">
+          <p class="eyebrow">Notre esprit</p>
+          <h2>Le luxe dans les détails.</h2>
+          <p>Velours Secret célèbre une féminité libre, élégante et authentique. Chaque détail est pensé pour vous offrir une expérience agréable, du choix de votre pièce jusqu'à sa réception.</p>
+          <p>Nous puisons notre inspiration dans la chaleur de la <strong>Teranga</strong>, les couleurs de nos marchés, la lumière de Dakar au coucher du soleil et la fierté des femmes qui nous entourent.</p>
+          <p class="demo-note">Texte provisoire, modifiable avant publication.</p>
+          <a href="apropos.html" class="btn btn--primary">Notre histoire</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- G. COFFRETS -->
+    <section class="section gifts" id="coffrets">
+      <div class="gifts__pattern" aria-hidden="true"></div>
+      <div class="container gifts__inner">
+        <div class="gifts__text reveal">
+          <p class="eyebrow eyebrow--light">Coffrets cadeaux</p>
+          <h2>Offrez un moment qui compte.</h2>
+          <p>Mariage, anniversaire, Tabaski, Saint-Valentin ou simple envie de gâter une proche : nos coffrets s'habillent de bordeaux et d'or. La personnalisation est une option à découvrir avec notre équipe.</p>
+          <a href="categorie.html?cat=Coffrets%20cadeaux" class="btn btn--gold">Découvrir les coffrets</a>
+        </div>
+        <div class="gifts__box reveal" aria-hidden="true">
+          <div class="box">
+            <div class="box__lid"></div>
+            <div class="box__body"></div>
+            <div class="box__ribbon box__ribbon--v"></div>
+            <div class="box__ribbon box__ribbon--h"></div>
+            <div class="box__label">VS</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- H. RÉASSURANCE -->
+    <section class="section section--tight" id="reassurance">
+      <div class="container">
+        <ul class="trust">
+          <li class="reveal">
+            <span class="trust__icon" data-icon="check"></span>
+            <h3>Commande simple</h3>
+            <p>Choisissez, ajoutez au panier, envoyez votre commande en un message.</p>
+          </li>
+          <li class="reveal">
+            <span class="trust__icon" data-icon="chat"></span>
+            <h3>Échanges via WhatsApp</h3>
+            <p>Notre équipe vous répond et vous conseille directement.</p>
+          </li>
+          <li class="reveal">
+            <span class="trust__icon" data-icon="gift"></span>
+            <h3>Emballage soigné</h3>
+            <p>Discret, selon les options disponibles.</p>
+          </li>
+          <li class="reveal">
+            <span class="trust__icon" data-icon="truck"></span>
+            <h3>Livraison selon zone</h3>
+            <p>Dakar et environs, en 24 h (1 000 à 2 000 FCFA). Autres régions : contactez-nous.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- I. AVIS (FICTIFS) -->
+    <section class="section section--cream" id="avis">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Elles en parlent</p>
+          <h2>Avis clientes</h2>
+          <p class="demo-note demo-note--strong">Exemples fictifs pour la maquette : ce ne sont pas de vrais témoignages.</p>
+        </header>
+        <div class="reviews">
+          <figure class="review reveal">
+            <span class="review__tag">Exemple fictif</span>
+            <div class="stars" aria-label="5 étoiles sur 5">★★★★★</div>
+            <blockquote>« Des finitions soignées et une vraie douceur. Je me suis sentie belle dès le premier port. »</blockquote>
+            <figcaption>Cliente exemple A · Dakar</figcaption>
+          </figure>
+          <figure class="review reveal">
+            <span class="review__tag">Exemple fictif</span>
+            <div class="stars" aria-label="5 étoiles sur 5">★★★★★</div>
+            <blockquote>« Le coffret était magnifique, parfait pour offrir. Échange très agréable sur WhatsApp. »</blockquote>
+            <figcaption>Cliente exemple B · Thiès</figcaption>
+          </figure>
+          <figure class="review reveal">
+            <span class="review__tag">Exemple fictif</span>
+            <div class="stars" aria-label="4 étoiles sur 5">★★★★☆</div>
+            <blockquote>« Le guide des tailles m'a aidée à bien choisir. J'ai hâte de découvrir la suite de la collection. »</blockquote>
+            <figcaption>Cliente exemple C · Saint-Louis</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- J. NEWSLETTER -->
+    <section class="section newsletter" id="newsletter">
+      <div class="container newsletter__inner reveal">
+        <h2>Un secret bien gardé…</h2>
+        <p>Recevez nos nouveautés et nos offres en avant-première.</p>
+        <form class="newsletter__form" id="newsletterForm" novalidate>
+          <label for="nlEmail" class="sr-only">Votre adresse e-mail</label>
+          <input type="email" id="nlEmail" placeholder="Votre adresse e-mail" autocomplete="email" required>
+          <button type="submit" class="btn btn--gold">Je m'inscris</button>
+        </form>
+        <p class="form-msg" id="nlMsg" role="status" aria-live="polite"></p>
+        <p class="newsletter__note">Démonstration : aucune inscription n'est réellement enregistrée.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pied de page, panier et favoris (injectés par common.js) -->
+  <div id="site-footer"></div>
+  <div id="site-drawers"></div>
+
+  <script src="common.js"></script>
+  <script src="home.js"></script>
+</body>
+</html>

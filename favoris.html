@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mes favoris — Velours Secret</title>
+  <meta name="description" content="Retrouvez les pièces Velours Secret que vous avez aimées, ajoutez-les au panier ou partagez votre liste sur WhatsApp.">
+  <meta name="theme-color" content="#722F43">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="favs">
+
+  <!-- En-tête + barre d'annonce (injectés par common.js) -->
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-head">
+      <div class="hero__pattern" aria-hidden="true"></div>
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane"><a href="index.html">Accueil</a><span>/</span><span aria-current="page">Mes favoris</span></nav>
+        <h1>Mes favoris</h1>
+        <p id="favIntro">Les pièces que vous avez aimées, réunies au même endroit.</p>
+      </div>
+    </section>
+    <div class="wax-band" aria-hidden="true"></div>
+
+    <section class="section section--cream favpage">
+      <div class="container">
+
+        <!-- ===== Aucun favori ===== -->
+        <div class="empty-state" id="favEmpty" hidden>
+          <span data-icon="heart"></span>
+          <h2>Aucun favori pour l’instant</h2>
+          <p>Touchez le cœur d’une pièce pour la retrouver ici, et la commander quand vous êtes prête.</p>
+          <a href="boutique.html" class="btn btn--primary">Parcourir la boutique</a>
+          <nav class="cat-tabs cat-tabs--center" id="favTabs" aria-label="Catégories"></nav>
+        </div>
+
+        <!-- ===== Liste de favoris ===== -->
+        <div id="favContent" hidden>
+          <div class="toolbar favpage__bar">
+            <p class="toolbar__count" id="favCount2" aria-live="polite"></p>
+            <div class="favpage__actions">
+              <a href="#" class="btn btn--whatsapp btn--small" id="favShare" target="_blank" rel="noopener"><span data-icon="whatsapp"></span> Partager ma liste</a>
+              <button type="button" class="link-btn" id="favClear">Vider mes favoris</button>
+            </div>
+          </div>
+          <p class="demo-note">Produits et prix fictifs : données de démonstration pour la maquette.</p>
+          <p class="favpage__hint">Choisissez une taille, puis ajoutez la pièce au panier. Un cœur retiré par erreur ? Touchez-le de nouveau pour le remettre.</p>
+          <div class="product-grid" id="favGrid"></div>
+          <div class="cartpage__tools">
+            <a href="boutique.html" class="cartpage__back">← Continuer mes achats</a>
+            <a href="panier.html" class="cartpage__back">Voir mon panier →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Idées à découvrir -->
+    <section class="section" id="favSuggest" hidden>
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow" id="suggestEyebrow">Pour vous inspirer</p>
+          <h2 id="suggestTitle">Nos coups de cœur</h2>
+          <p class="demo-note">Produits et prix fictifs : données de démonstration.</p>
+        </header>
+        <div class="product-grid" id="suggestGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pied de page, panier et favoris (injectés par common.js) -->
+  <div id="site-footer"></div>
+  <div id="site-drawers"></div>
+
+  <script src="common.js"></script>
+  <script src="favoris.js"></script>
+</body>
+</html>
